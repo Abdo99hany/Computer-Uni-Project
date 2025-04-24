@@ -23,8 +23,80 @@
       <button type="submit">Login</button>
     </form>
   </div>
+  
+    <div id="welcomeMessage" style="display:none;">
+        <h2>Congrats! You're logged in !</h2>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // يمنع الفورم من الإرسال الفعلي
+
+            let username = document.getElementById("Username").value;
+            let password = document.getElementById("password").value;
+
+            // التحقق إذا كانت القيم فارغة
+            if (username === "" || password === "") {
+                alert("Please fill in both username and password.");
+            } else {
+                alert("Congrats! You're logged in as " + username);
+                document.getElementById("welcomeMessage").style.display = "block"; // عرض رسالة الترحيب
+            }
+        });
+    </script>
+
+  
   <footer>
     <p>&copy; 2025 5er Insha'Allah Team. All rights reserved.</p>
   </footer>
 </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">  
+ <link rel="stylesheet" type="text/css" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+             <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+<h1>Welcome to My Website</h1>
+
+ 
+
+    <div id="welcomeMessage" style="display:none;">
+        <h2>Congrats! You're logged in !</h2>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // يمنع الفورم من الإرسال الفعلي
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            // التحقق إذا كانت القيم فارغة
+            if (username === "" || password === "") {
+                alert("Please fill in both username and password.");
+            } else {
+                alert("Congrats! You're logged in as " + username);
+                document.getElementById("welcomeMessage").style.display = "block"; // عرض رسالة الترحيب
+            }
+        });
+    </script>
+
+  </body>
+  
+
+
+
+
 </html>
