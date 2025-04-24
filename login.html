@@ -15,35 +15,28 @@
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
-  <div class="container">
-    <h1>Login</h1>
-    <form class="login-form">
-      <input type="text" placeholder="Username" required />
-      <input type="password" placeholder="Password" required />
+ <form class="login-form" id="loginForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
       <button type="submit">Login</button>
-    </form>
-  </div>
-  
-    <div id="welcomeMessage" style="display:none;">
-        <h2>Congrats! You're logged in !</h2>
-    </div>
+  </form>
 
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // يمنع الفورم من الإرسال الفعلي
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // منع الفورم من الإرسال الفعلي
 
-            let username = document.getElementById("Username").value;
-            let password = document.getElementById("password").value;
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
 
-            // التحقق إذا كانت القيم فارغة
-            if (username === "" || password === "") {
-                alert("Please fill in both username and password.");
-            } else {
-                alert("Congrats! You're logged in as " + username);
-                document.getElementById("welcomeMessage").style.display = "block"; // عرض رسالة الترحيب
-            }
-        });
-    </script>
+        // التحقق إذا كانت القيم فارغة
+        if (username === "" || password === "") {
+            alert("Please fill in both username and password.");
+        } else {
+            alert("Congrats! You're logged in as " + username);
+        }
+    });
+  </script>
+    
 
   
   <footer>
